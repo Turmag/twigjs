@@ -164,6 +164,8 @@ module.exports = function (Twig) {
      * @throws Twig.Error
      */
     Twig.exports.renderFile = function (path, options, fn) {
+		path = "templates/" + path;
+		
         // Handle callback in options
         if (typeof options === 'function') {
             fn = options;
